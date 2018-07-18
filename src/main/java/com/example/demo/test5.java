@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @desc scanner输入
  **/
 public class test5 {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         /**
          * 输入年龄
          */
@@ -37,11 +37,12 @@ public class test5 {
         /**
          * 文件输入
          */
-          Scanner sc = new Scanner(new FileInputStream(new File("D:"+File.separator+"info.txt")));
-          sc.useDelimiter("\n");    //自定义分隔符
-          while (sc.hasNext()){
-              System.out.println(sc.next());
-          }
-          sc.close();
+        Scanner sc = new Scanner(new FileInputStream(new File("D:" + File.separator + "info.txt")));
+        //自定义分隔符
+        sc.useDelimiter("\n");
+        while (sc.hasNext()) {
+            System.out.println(sc.next());
+        }
+        sc.close();
     }
 }

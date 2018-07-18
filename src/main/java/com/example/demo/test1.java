@@ -14,10 +14,13 @@ public class test1 {
         InputStream input = new ByteArrayInputStream(msg.getBytes());
         OutputStream output = new ByteArrayOutputStream();
         int temp = 0;
-        while ((temp = input.read()) != -1){
-            output.write(Character.toUpperCase(temp));//每个字节都要处理
-        } //此时所有的数据都在OutputStream类中了
-        System.out.println(output);//直接输出对象，调用toString()
+        while ((temp = input.read()) != -1) {
+            //每个字节都要处理
+            output.write(Character.toUpperCase(temp));
+            //此时所有的数据都在OutputStream类中了
+        }
+        //直接输出对象，调用toString()
+        System.out.println(output);
         input.close();
         output.close();
     }
